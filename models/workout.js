@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+// creating the workout schema for adding exercies on a workout day. some fields have validation to require input//
 const WorkoutSchema = new Schema({
     day: {
         type: Date,
@@ -52,5 +53,6 @@ WorkoutSchema.virtual("totalDuration").get(function () {
     }, 0);
 });
 
+//exporting the workout schema//
 const workout = mongoose.model("workout", WorkoutSchema);
 module.exports = workout;

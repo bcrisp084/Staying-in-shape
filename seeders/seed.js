@@ -7,6 +7,7 @@ mongoose.connect("mongodb://localhost/workout", {
 
 });
 
+// this is an itial workout schema we inject into the database for a preliminary workout//
 let workoutSeed = [
   {
     day: new Date().setDate(new Date().getDate()-10),

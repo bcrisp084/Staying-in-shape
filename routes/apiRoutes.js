@@ -1,7 +1,7 @@
 const db = require("../models");
 module.exports = function (app) {
 
-
+// this is our post route for adding our workout information to the database//
     app.post("/api/workouts", function (req, res) {
         db.workout.create({})
             .then(data => res.json(data))
@@ -10,7 +10,7 @@ module.exports = function (app) {
             })
     });
 
-
+// this is the get request for retrieving the info back from our database to display on the webpage//
     app.get("/api/workouts", (req, res) => {
         db.workout.find({})
             .then(data => {
@@ -21,6 +21,8 @@ module.exports = function (app) {
             })
     }
     )
+
+    // this put request lets us update any info on the database for a specific workout that we may want to add to
     app.put("/api/workouts/:id", (req, res) => {    
         const id = req.params.id;
         const body = req.body;
@@ -32,6 +34,8 @@ module.exports = function (app) {
             res.json(err);
           });
       });
+
+      // lastly we use range to return only a portion of the http request//
 
     app.get("/api/workouts/range", (req, res) => {
         db.workout.find({})
