@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // set our mongoose connection to local host//
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/staying-in-shape", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useNewUrlParser: true,
   useFindAndModify: false,
   useCreateIndex: true,
