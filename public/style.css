@@ -25,6 +25,10 @@ nav {
   font-size: 1.2rem;
 }
 
+.dash{
+  float: right;
+}
+
 a,
 a:hover,
 a:active,
